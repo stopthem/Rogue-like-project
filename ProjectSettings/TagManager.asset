@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Enemies
   - Player bullets
   - Enemy Bullets
-  - 
-  - 
-  - 
+  - Breakable
+  - IgnoreBullets
+  - Pickups
   - 
   - 
   - 
@@ -41,6 +42,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3534302159
+    locked: 0
+  - name: Objects
+    uniqueID: 2923890759
+    locked: 0
+  - name: PickUps
+    uniqueID: 931398133
+    locked: 0
+  - name: Enemies
+    uniqueID: 1918331597
+    locked: 0
+  - name: 'Bullets '
+    uniqueID: 1765807951
     locked: 0
   - name: Player
     uniqueID: 1964749833
