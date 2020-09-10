@@ -38,13 +38,15 @@ public class PlayerHealth : MonoBehaviour
         {
             
             currentHealth--;
-
+            AudioManager.instance.PlaySFX(11);
             invincibleCount=damageInvincibleLenght;
             PlayerController.instance.bodySprite.color=new Color(PlayerController.instance.bodySprite.color.r,PlayerController.instance.bodySprite.color.g,PlayerController.instance.bodySprite.color.b,.5f);
             if (currentHealth<=0)
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
+                AudioManager.instance.PlaySFX(9);
+                AudioManager.instance.PlayGameOver();
             }
             UIController.instance.healthSlider.value = currentHealth;
             UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();

@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
+            AudioManager.instance.PlaySFX(12);
             shotCounter=timeBetweenShots;
         }
         if (Input.GetMouseButton(0))
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
             if (shotCounter<=0)
             {
                 Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
+                AudioManager.instance.PlaySFX(12);
                 shotCounter=timeBetweenShots;
             }
         }
@@ -97,6 +99,7 @@ public class PlayerController : MonoBehaviour
                 activeMoveSpeed = dashSpeed;
                 dashCounter = dashLength;
                 anim.SetTrigger("dash");
+                AudioManager.instance.PlaySFX(8);
                 PlayerHealth.instance.MakePlayerInvincible(dashInvincibleAbility);
             }
             

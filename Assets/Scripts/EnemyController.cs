@@ -50,6 +50,7 @@ public class EnemyController : MonoBehaviour
         {
             fireCounter=fireRate;
             Instantiate(enemyBullet,firePoint.position,firePoint.rotation);
+            AudioManager.instance.PlaySFX(13);
         }
     }
 
@@ -73,10 +74,12 @@ public class EnemyController : MonoBehaviour
     {
         enemyHealth -= damage;
         Instantiate(deathVFX,transform.position,transform.rotation);
+        AudioManager.instance.PlaySFX(2);
         if (enemyHealth<=0)
         {
             // Instantiate(deathVFX,transform.position,transform.rotation);
             Destroy(gameObject);
+            AudioManager.instance.PlaySFX(1);
             int selectedSplatter=Random.Range(0,deathSplatters.Length);
             int rotation =Random.Range(0,4);
             Instantiate(deathSplatters[selectedSplatter],transform.position,Quaternion.Euler(0f,0f,rotation * 90f));

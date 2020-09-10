@@ -25,6 +25,7 @@ public class PlayerBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other) {
         Instantiate(bulletImpactVFX,transform.position,transform.rotation);
+        AudioManager.instance.PlaySFX(4);
         if (other.tag=="Enemy")
         {
             other.GetComponent<EnemyController>().TakeDamage(damageToGive);

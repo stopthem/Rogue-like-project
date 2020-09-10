@@ -20,23 +20,18 @@ public class Breakables : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    public void Smash()
     {
-        if (other.tag == "Player")
-        {
-            if (PlayerController.instance.dashCounter > 0)
-            {
-                Destroy(gameObject);
+        Destroy(gameObject);
+        AudioManager.instance.PlaySFX(0);
 
-                int piecesToDrop = Random.Range(1, maxPieces);
-                for (int i = 0; i < piecesToDrop; i++)
-                {
+        int piecesToDrop = Random.Range(1, maxPieces);
+        for (int i = 0; i < piecesToDrop; i++)
+            {
                     int randomPiece = Random.Range(0,brokenPieces.Length);
                     Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
-                }
-
             }
-            if (shouldDropItem)
+        if (shouldDropItem)
             {
                 float dropChance = Random.Range(0f,100f);
                 if (dropChance < itemDropPercent)
@@ -45,7 +40,19 @@ public class Breakables : MonoBehaviour
                     Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
                 }
             }
-            
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            if (PlayerController.instance.dashCounter > 0)
+            {
+                Smash();
+            }
+        }
+        if (other.tag == "PlayerBullet")
+        {
+            Smash();
         }
     }
 }
