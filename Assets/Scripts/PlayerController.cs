@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float activeMoveSpeed;
     public float dashSpeed = 8f , dashLength= .5f , dashCooldown= 1f , dashInvincibleAbility = .5f;
     private float dashCdCounter;
+    [HideInInspector]public bool canMove = true;
     [HideInInspector]public float dashCounter;
     private void Awake() {
         instance=this;
@@ -31,9 +32,18 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        MovePlayer();
-        GunAndBodyFacing();
-        Shoot();
+        if (canMove)
+        {
+            MovePlayer();
+            GunAndBodyFacing();
+            Shoot();
+        }
+        else
+        {
+            rigidBody.velocity = Vector2.zero;
+            anim.SetBool("isMoving",false);
+        }
+        
     }
 
     private void Shoot()
