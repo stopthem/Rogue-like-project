@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Image fadeScreen;
     public float fadeTime;
     private bool fadeToBlack, fadeOutBlack;
+    public string newGameScene, mainMenuScene;
     // Start is called before the first frame update
     private void Awake() {
         instance=this;
@@ -48,5 +49,13 @@ public class UIController : MonoBehaviour
     {
         fadeToBlack = true;
         fadeOutBlack = false;
+    }
+    public void NewGameButton()
+    {
+        SceneManager.LoadScene(newGameScene);
+    }
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene(mainMenuScene);
     }
 }
