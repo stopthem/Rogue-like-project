@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     public float fadeTime;
     private bool fadeToBlack, fadeOutBlack;
     public string newGameScene, mainMenuScene;
+    public GameObject pauseScreen;
     // Start is called before the first frame update
     private void Awake() {
         instance=this;
@@ -52,10 +53,16 @@ public class UIController : MonoBehaviour
     }
     public void NewGameButton()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(newGameScene);
     }
     public void MainMenuButton()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuScene);
+    }
+    public void Resume()
+    {
+        LevelManager.instance.PauseUnPause();
     }
 }
