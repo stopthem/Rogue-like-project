@@ -1858,6 +1858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2593900327299627482}
   - component: {fileID: 5414893334819314101}
+  - component: {fileID: 2218756901548521912}
   m_Layer: 0
   m_Name: Door_Horizontal
   m_TagString: Untagged
@@ -1932,6 +1933,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2218756901548521912
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596120523467125214}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 2}
+    newSize: {x: 0.6875, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6875, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &6085503098080297751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +1969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732836431780342936}
   - component: {fileID: 1740115244167180402}
+  - component: {fileID: 6518415250265293293}
   m_Layer: 0
   m_Name: Door_Vertical
   m_TagString: Untagged
@@ -2015,6 +2043,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6518415250265293293
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6085503098080297751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6395540678807351349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6008069369950511336}
   - component: {fileID: 2815433096246182838}
+  - component: {fileID: 5608562700640298545}
   m_Layer: 0
   m_Name: Door_Top
   m_TagString: Untagged
@@ -2097,6 +2152,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &5608562700640298545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395540678807351349}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 1}
+    newSize: {x: 0.6875, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6875, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8951938497212812456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,15 +2284,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cd1187f2e56a141b06bb922fe56c6b, type: 3}
---- !u!1 &3696178598462121818 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2959764115320434753, guid: c6cd1187f2e56a141b06bb922fe56c6b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1898345386295367451}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3696178598462121822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2959764115320434757, guid: c6cd1187f2e56a141b06bb922fe56c6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1898345386295367451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3696178598462121818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959764115320434753, guid: c6cd1187f2e56a141b06bb922fe56c6b,
     type: 3}
   m_PrefabInstance: {fileID: 1898345386295367451}
   m_PrefabAsset: {fileID: 0}
@@ -2464,6 +2545,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2236526744537769761}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 2236526743077333619}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 2236526743422642336}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2236526743903575037}
     - target: {fileID: 8850075506848331173, guid: c2fecb150348f224caaf5516ab6c2b00,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2626,6 +2732,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-Fire (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2236526744537769761}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 2236526743077333619}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 2236526743903575037}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2236526743422642336}
     - target: {fileID: 8850075506848331173, guid: c2fecb150348f224caaf5516ab6c2b00,
         type: 3}
       propertyPath: m_LocalPosition.x

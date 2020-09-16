@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7290901221434361982}
   - component: {fileID: 8377113023943593544}
+  - component: {fileID: 2011611830316245165}
   m_Layer: 0
   m_Name: Door_Top
   m_TagString: Untagged
@@ -82,6 +83,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2011611830316245165
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349199313053591936}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 1}
+    newSize: {x: 0.6875, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6875, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &733429238419835547
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8845253076399108433}
   - component: {fileID: 3101583777021456448}
+  - component: {fileID: 8070617437409898385}
   m_Layer: 0
   m_Name: Door_Vertical
   m_TagString: Untagged
@@ -349,6 +377,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8070617437409898385
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984418340763147185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5447400881519250121
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949165401036398608}
   - component: {fileID: 7650124707815780589}
+  - component: {fileID: 7797320050435361829}
   m_Layer: 0
   m_Name: Door_Vertical (1)
   m_TagString: Untagged
@@ -432,6 +487,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &7797320050435361829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447400881519250121}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6162768933088985200
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +711,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1011,14 +1092,14 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 2811704598577035907, guid: fffd7cf32ae20e84cba373590dd03da4,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -8961167715618194868, guid: fffd7cf32ae20e84cba373590dd03da4,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 3019362334984307841, guid: fffd7cf32ae20e84cba373590dd03da4,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -8961167715618194868, guid: fffd7cf32ae20e84cba373590dd03da4,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1609318697812274242, guid: fffd7cf32ae20e84cba373590dd03da4,
       type: 3}
@@ -1161,18 +1242,6 @@ CompositeCollider2D:
   - m_Collider: {fileID: 783933784186879366}
     m_ColliderPaths:
     - - X: 90000000
-        Y: -20000100
-      - X: 90000041
-        Y: -20000100
-      - X: 90000100
-        Y: -20000041
-      - X: 90000100
-        Y: 20000041
-      - X: 90000041
-        Y: 20000100
-      - X: 90000000
-        Y: 20000100
-      - X: 90000000
         Y: 50000000
       - X: 10000000
         Y: 50000000
@@ -1180,18 +1249,6 @@ CompositeCollider2D:
         Y: 40000000
       - X: 80000000
         Y: 40000000
-      - X: 80000000
-        Y: 20000100
-      - X: 79999959
-        Y: 20000100
-      - X: 79999900
-        Y: 20000041
-      - X: 79999900
-        Y: -20000041
-      - X: 79999959
-        Y: -20000100
-      - X: 80000000
-        Y: -20000100
       - X: 80000000
         Y: -40000000
       - X: 10000000
@@ -1304,6 +1361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9005622894642385668}
   - component: {fileID: 1857119442635278794}
+  - component: {fileID: 8657715756870240138}
   m_Layer: 0
   m_Name: Door_Horizontal
   m_TagString: Untagged
@@ -1378,3 +1436,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &8657715756870240138
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731366057897593451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6875, y: 2}
+    newSize: {x: 0.6875, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6875, y: 2}
+  m_EdgeRadius: 0
