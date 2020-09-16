@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Dungeon 3 Tiles_26
+  m_Name: Dungeon 3 Tiles_26 1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -5931736768423006507, guid: 5851bbaf0e1df5047a88e089cc3dfad9,
     type: 3}
@@ -34,4 +34,4 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 1
+  m_ColliderType: 0
