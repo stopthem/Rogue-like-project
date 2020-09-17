@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     private bool fadeToBlack, fadeOutBlack;
     public string newGameScene, mainMenuScene;
     public GameObject pauseScreen;
+    public TextMeshProUGUI coinText;
     // Start is called before the first frame update
     private void Awake() {
         instance=this;

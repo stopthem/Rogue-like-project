@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public float waitToLoad = 4f;
     public string levelToLoad;
     public bool isPaused;
+    public int currentCoins;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -17,6 +19,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        UIController.instance.coinText.text=currentCoins.ToString();
     }
 
     // Update is called once per frame
@@ -50,5 +53,20 @@ public class LevelManager : MonoBehaviour
             isPaused = false;
             Time.timeScale = 1f;
         }
+    }
+    public void GetCoins(int coinAmount)
+    {
+        currentCoins += coinAmount;
+        UIController.instance.coinText.text=currentCoins.ToString();
+    }
+    public void SpendCoins(int coinAmount)
+    {
+        currentCoins -= coinAmount;
+        UIController.instance.coinText.text=currentCoins.ToString();
+       if (currentCoins < 0)
+       {
+           currentCoins = 0;
+           UIController.instance.coinText.text=currentCoins.ToString();
+       } 
     }
 }

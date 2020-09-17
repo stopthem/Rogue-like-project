@@ -3778,6 +3778,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 3898730112653355623}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 4846835595455934486}
+    - target: {fileID: 8850075506848331171, guid: c2fecb150348f224caaf5516ab6c2b00,
+        type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 4045957148466899333}
     - target: {fileID: 8850075506848331173, guid: c2fecb150348f224caaf5516ab6c2b00,
         type: 3}
       propertyPath: m_LocalPosition.x

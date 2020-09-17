@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 8396199124084793496}
-  movingSpeed: 3
+  movingSpeed: 5
   shouldChasePlayer: 1
   rangeToChasePlayer: 5
   shouldRunAway: 0
@@ -133,8 +133,12 @@ MonoBehaviour:
   enemyBullet: {fileID: 6504724101352327711, guid: b4cc408c2ddde694e96b8752ffc4a9ac,
     type: 3}
   firePoint: {fileID: 4906551010252914884}
-  fireRate: 2
+  fireRate: 0.3
   rangeToAggro: 10
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 1034085831315134040, guid: 68c74f52c1f982244a671c23a4e79a83, type: 3}
+  itemDropPercent: 20
 --- !u!50 &8396199124084793496
 Rigidbody2D:
   serializedVersion: 4

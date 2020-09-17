@@ -113,6 +113,8 @@ MonoBehaviour:
   shouldWander: 0
   wanderLength: 0
   pauseLength: 0
+  shouldPatrol: 0
+  patrolPoints: []
   animator: {fileID: 7558702562455781635}
   enemyHealth: 100
   deathVFX: {fileID: 1173567970070107034, guid: 59b482d4b2219e8439189ab56e853917,
@@ -122,13 +124,17 @@ MonoBehaviour:
   - {fileID: 1289916532492615761, guid: 7d278077325ff0142a2f3a558740ec96, type: 3}
   - {fileID: 6203477008301996180, guid: d1a750c7f3b2c7a4a834221ef14b6f56, type: 3}
   - {fileID: 8748703079544045888, guid: 6a0907cfcda278540b01cfe0a3e27e14, type: 3}
+  enemyBody: {fileID: 7558702562996411207}
   shouldShoot: 1
   enemyBullet: {fileID: 6504724101352327711, guid: b4cc408c2ddde694e96b8752ffc4a9ac,
     type: 3}
   firePoint: {fileID: 6374633433329803611}
   fireRate: 2
   rangeToAggro: 10
-  enemyBody: {fileID: 7558702562996411207}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 1034085831315134040, guid: 68c74f52c1f982244a671c23a4e79a83, type: 3}
+  itemDropPercent: 20
 --- !u!50 &7558702562455781639
 Rigidbody2D:
   serializedVersion: 4
