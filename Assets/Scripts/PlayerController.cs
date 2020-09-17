@@ -11,10 +11,10 @@ public class PlayerController : MonoBehaviour
     public Transform gunArm;
     public Camera mainCamera;
     public Animator anim;
-    public GameObject bulletToFire;
-    public Transform firePoint;
-    public float timeBetweenShots;
-    public float shotCounter;
+    // public GameObject bulletToFire;
+    // public Transform firePoint;
+    // public float timeBetweenShots;
+    // public float shotCounter;
     public static PlayerController instance;
     public SpriteRenderer bodySprite;
     private float activeMoveSpeed;
@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private float dashCdCounter;
     [HideInInspector]public bool canMove = true;
     [HideInInspector]public float dashCounter;
+    public List<Gun> availableGuns = new List<Gun>();
+    private int currentGun;
     private void Awake() {
         instance=this;
     }
@@ -36,35 +38,52 @@ public class PlayerController : MonoBehaviour
         {
             MovePlayer();
             GunAndBodyFacing();
-            Shoot();
+            // Shoot();
         }
         else
         {
             rigidBody.velocity = Vector2.zero;
             anim.SetBool("isMoving",false);
         }
+        if (Input.GetKeyDown(KeyCode.BackQuote))
+        {
+            if (availableGuns.Count > 0)
+            {
+                currentGun++;
+                if (currentGun >= availableGuns.Count)
+                {
+                    currentGun = 0;
+                }
+                SwitchGun();
+            }   
+            else
+            {
+                Debug.LogError("Player has no guns!");
+            }
+        }
         
     }
 
-    private void Shoot()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
-            AudioManager.instance.PlaySFX(12);
-            shotCounter=timeBetweenShots;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            shotCounter -= Time.deltaTime;
-            if (shotCounter<=0)
-            {
-                Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
-                AudioManager.instance.PlaySFX(12);
-                shotCounter=timeBetweenShots;
-            }
-        }
-    }
+    // private void Shoot()
+    // {
+    //     if (Input.GetMouseButtonDown(0))
+    //     {
+    //         Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
+    //         AudioManager.instance.PlaySFX(12);
+    //         shotCounter=timeBetweenShots;
+    //     }
+    //     if (Input.GetMouseButton(0))
+    //     {
+    //         shotCounter -= Time.deltaTime;
+    //         if (shotCounter<=0)
+    //         {
+    //             Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
+    //             AudioManager.instance.PlaySFX(12);
+    //             shotCounter=timeBetweenShots;
+    //         }
+    //     }
+    // }
+
 
     private void GunAndBodyFacing()
     {
@@ -127,5 +146,13 @@ public class PlayerController : MonoBehaviour
         {
             dashCdCounter -= Time.deltaTime;
         }
+    }
+    public void SwitchGun()
+    {
+        foreach (Gun theGun in availableGuns)
+        {
+            theGun.gameObject.SetActive(false);
+        }
+        availableGuns[currentGun].gameObject.SetActive(true);
     }
 }
