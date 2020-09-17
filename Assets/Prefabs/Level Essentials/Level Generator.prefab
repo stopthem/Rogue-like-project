@@ -117,7 +117,7 @@ MonoBehaviour:
       type: 3}
     tripleDownUpLeft: {fileID: 6162768933088985200, guid: 1987324ad2babb74d907fbfcb5ac92ec,
       type: 3}
-    tripleUpRightDown: {fileID: 8153940066335509425, guid: 386ecb69718fd1a4a8e8b2f165954524,
+    tripleUpRightDown: {fileID: 5864403993977761605, guid: 2e84091385a2254448f1855410ee8a44,
       type: 3}
     fourWay: {fileID: 5986908531106849675, guid: b40f46e7534b3bc4bb0d01e1c8cc05dc,
       type: 3}

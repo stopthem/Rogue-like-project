@@ -9,6 +9,7 @@ public class Room : MonoBehaviour
     // public bool openWhenEnemiesCleared;
     // public List<GameObject> enemies = new List<GameObject>();
     [HideInInspector]public bool roomActive;
+    public GameObject mapHider;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,7 @@ public class Room : MonoBehaviour
                 }
             }
             roomActive = true;
+            mapHider.SetActive(false);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
