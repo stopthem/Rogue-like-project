@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public bool canMove = true;
     [HideInInspector]public float dashCounter;
     public List<Gun> availableGuns = new List<Gun>();
-    private int currentGun;
+    [HideInInspector]public int currentGun;
     private void Awake() {
         instance=this;
     }
@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     {
         mainCamera=Camera.main;
         activeMoveSpeed=movementSpeed;
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].weaponUI;
+        UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
     void Update()
     {
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
             rigidBody.velocity = Vector2.zero;
             anim.SetBool("isMoving",false);
         }
-        if (Input.GetKeyDown(KeyCode.BackQuote))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (availableGuns.Count > 0)
             {
@@ -154,5 +156,7 @@ public class PlayerController : MonoBehaviour
             theGun.gameObject.SetActive(false);
         }
         availableGuns[currentGun].gameObject.SetActive(true);
+        UIController.instance.currentGun.sprite = availableGuns[currentGun].weaponUI;
+        UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
 }

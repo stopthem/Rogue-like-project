@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 144635008110078991}
   movingSpeed: 5
-  shouldChasePlayer: 1
+  shouldChasePlayer: 0
   rangeToChasePlayer: 5
   shouldRunAway: 0
   runawayRange: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   shouldPatrol: 0
   patrolPoints: []
   animator: {fileID: 144635008110078987}
-  enemyHealth: 100
+  enemyHealth: 150
   deathVFX: {fileID: 1173567970070107034, guid: 59b482d4b2219e8439189ab56e853917,
     type: 3}
   deathSplatters:
@@ -96,11 +96,11 @@ MonoBehaviour:
   - {fileID: 6203477008301996180, guid: d1a750c7f3b2c7a4a834221ef14b6f56, type: 3}
   - {fileID: 8748703079544045888, guid: 6a0907cfcda278540b01cfe0a3e27e14, type: 3}
   enemyBody: {fileID: 144635008643233359}
-  shouldShoot: 0
+  shouldShoot: 1
   enemyBullet: {fileID: 6504724101352327711, guid: b4cc408c2ddde694e96b8752ffc4a9ac,
     type: 3}
   firePoint: {fileID: 3644257062768872531}
-  fireRate: 2
+  fireRate: 0.3
   rangeToAggro: 10
   shouldDropItem: 1
   itemsToDrop:

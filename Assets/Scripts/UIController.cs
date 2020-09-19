@@ -16,6 +16,8 @@ public class UIController : MonoBehaviour
     public string newGameScene, mainMenuScene;
     public GameObject pauseScreen,mapDisplay,bigMapText;
     public TextMeshProUGUI coinText;
+    public Image currentGun;
+    public Text gunText;
     // Start is called before the first frame update
     private void Awake() {
         instance=this;

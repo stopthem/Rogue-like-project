@@ -55,7 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5015353030359974165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.93, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -131,3 +131,9 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 2746398246741409377}
   timeBetweenShots: 1
+  weaponName: REVOLVER
+  weaponUI: {fileID: -3940896912681915257, guid: f72804754a2106a4884d758772ef2a02,
+    type: 3}
+  itemCost: 40
+  gunShopSprite: {fileID: -51580551502718289, guid: 48d85d1ef51430e42b6aef57f02c863d,
+    type: 3}
