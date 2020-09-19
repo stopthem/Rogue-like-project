@@ -14,7 +14,9 @@ public class PlayerHealth : MonoBehaviour
     }
     void Start()
     {
-        currentHealth=maxHealth;
+        maxHealth = CharachterTracker.instance.maxHealth;
+        currentHealth = CharachterTracker.instance.currentHealth;
+        // currentHealth=maxHealth;
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
         UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();

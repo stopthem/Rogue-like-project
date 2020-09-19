@@ -533,7 +533,7 @@ MonoBehaviour:
   - {fileID: 5410846429872932563}
   closeWhenEntered: 0
   roomActive: 0
-  mapHider: {fileID: 2433000308348205536}
+  mapHider: {fileID: 4349938344769725607}
 --- !u!1 &6671263042346160111
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,7 +116,7 @@ MonoBehaviour:
   shouldPatrol: 0
   patrolPoints: []
   animator: {fileID: 7558702562455781635}
-  enemyHealth: 100
+  enemyHealth: 75
   deathVFX: {fileID: 1173567970070107034, guid: 59b482d4b2219e8439189ab56e853917,
     type: 3}
   deathSplatters:

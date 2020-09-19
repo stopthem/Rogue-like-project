@@ -24,8 +24,11 @@ public class UIController : MonoBehaviour
     }
     void Start()
     {
+        
         fadeOutBlack = true;
         fadeToBlack = false;
+        currentGun.sprite = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].gunShopSprite;
+        gunText.text = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].weaponName;
         
     }
 

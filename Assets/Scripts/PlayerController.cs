@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rigidBody;
     private Vector2 moveInput;
     public Transform gunArm;
-    public Camera mainCamera;
     public Animator anim;
     // public GameObject bulletToFire;
     // public Transform firePoint;
@@ -26,10 +25,11 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public int currentGun;
     private void Awake() {
         instance=this;
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
-        mainCamera=Camera.main;
+        // mainCamera=Camera.main;
         activeMoveSpeed=movementSpeed;
         UIController.instance.currentGun.sprite = availableGuns[currentGun].weaponUI;
         UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     private void GunAndBodyFacing()
     {
         Vector3 mousePosition = Input.mousePosition;
-        Vector3 screenPoint = mainCamera.WorldToScreenPoint(transform.localPosition);
+        Vector3 screenPoint = CameraController.instance.mainCamera.WorldToScreenPoint(transform.localPosition);
 
         if (mousePosition.x < screenPoint.x)
         {
