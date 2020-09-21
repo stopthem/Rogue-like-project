@@ -105,7 +105,7 @@ MonoBehaviour:
   shouldDropItem: 1
   itemsToDrop:
   - {fileID: 1034085831315134040, guid: 68c74f52c1f982244a671c23a4e79a83, type: 3}
-  itemDropPercent: 20
+  itemDropPercent: 30
 --- !u!50 &144635008110078991
 Rigidbody2D:
   serializedVersion: 4

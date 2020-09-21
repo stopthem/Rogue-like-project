@@ -412,10 +412,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8646778506575363541, guid: d27de5ff1f87566499fb08b43e096eb0,
+        type: 3}
+      propertyPath: potentialCenters.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646778506575363541, guid: d27de5ff1f87566499fb08b43e096eb0,
+        type: 3}
+      propertyPath: potentialCenters.Array.data[9]
+      value: 
+      objectReference: {fileID: 3171296641356836472, guid: 97e982464a3e5894cbed4c22498c5ba4,
+        type: 3}
+    - target: {fileID: 8646778506575363541, guid: d27de5ff1f87566499fb08b43e096eb0,
+        type: 3}
+      propertyPath: potentialCenters.Array.data[10]
+      value: 
+      objectReference: {fileID: 8731913224917368829, guid: 60012163d36d2ad4bb91c162553edc20,
+        type: 3}
+    - target: {fileID: 8646778506575363541, guid: d27de5ff1f87566499fb08b43e096eb0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8646778506575363542, guid: d27de5ff1f87566499fb08b43e096eb0,
         type: 3}
       propertyPath: m_Name
       value: Level Generator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646778506575363542, guid: d27de5ff1f87566499fb08b43e096eb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d27de5ff1f87566499fb08b43e096eb0, type: 3}

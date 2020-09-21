@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d585d53b30d0e540a46346eca1a2a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 12
+  bulletSpeed: 15
   rigidBody: {fileID: 8094375249283114149}
   bulletImpactVFX: {fileID: 2172752772493428207, guid: 6111f516ab320c94f8a2e0666eb7dbc9,
     type: 3}
-  damageToGive: 25
+  damageToGive: 15
 --- !u!61 &8094375249283114150
 BoxCollider2D:
   m_ObjectHideFlags: 0

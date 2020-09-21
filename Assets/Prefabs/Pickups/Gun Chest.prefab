@@ -233,6 +233,7 @@ MonoBehaviour:
   - {fileID: 5277543343327409412, guid: 8761e68239261304bae74b9cbeffca0b, type: 3}
   - {fileID: 6489999491959025798, guid: d9f7c9ff60769cd4ab2223bcf57811fb, type: 3}
   - {fileID: 766359842548073603, guid: 89332fe0d58cc2447b6803ccd511bda0, type: 3}
+  - {fileID: 5684077318243481115, guid: 3af43bafbc0d765489a35ed334f357da, type: 3}
   theSR: {fileID: 5691397966881296226}
   chestOpen: {fileID: 444756885432138965, guid: 815f98a145a4ae14d897a7f431477ea9,
     type: 3}

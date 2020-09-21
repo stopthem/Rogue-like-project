@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2018616474664103032}
   - component: {fileID: 8936627347099287189}
   m_Layer: 8
-  m_Name: Machine Gun
+  m_Name: SNIPER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,11 +100,11 @@ MonoBehaviour:
   bulletToFire: {fileID: 8333332427728006649, guid: 77f669fec2dc59d4093115031cb83993,
     type: 3}
   firePoint: {fileID: 8687083289091326498}
-  timeBetweenShots: 0.2
-  weaponName: MACHINE GUN
+  timeBetweenShots: 1.5
+  weaponName: SNIPER
   weaponUI: {fileID: -2172343002418747524, guid: f72804754a2106a4884d758772ef2a02,
     type: 3}
-  itemCost: 35
+  itemCost: 40
   gunShopSprite: {fileID: 6820856509940793013, guid: 48d85d1ef51430e42b6aef57f02c863d,
     type: 3}
 --- !u!1 &8687083289091326497
@@ -131,7 +131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687083289091326497}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.977, y: 0.32, z: 0}
+  m_LocalPosition: {x: 1.442, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1120410381586813801}

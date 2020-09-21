@@ -43,9 +43,10 @@ public class GunPickup : MonoBehaviour
                 PlayerController.instance.availableGuns.Add(gunClone);
                 PlayerController.instance.currentGun = PlayerController.instance.availableGuns.Count - 1;
                 PlayerController.instance.SwitchGun();
+                AudioManager.instance.PlaySFX(7);
+                Destroy(gameObject);
             }
-            AudioManager.instance.PlaySFX(7);
-            Destroy(gameObject);
+            
         }
     }
 }

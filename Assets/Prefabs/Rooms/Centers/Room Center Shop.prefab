@@ -420,6 +420,7 @@ MonoBehaviour:
   - {fileID: 8936627347099287189, guid: b4f409c7692e38b48af909caaf751870, type: 3}
   - {fileID: 7359585402621199432, guid: 4466756ba1c02d04199d140b00ccaaf0, type: 3}
   - {fileID: 2492414359073407702, guid: ba40dfbeb81235a4a8e99209cc2a52e6, type: 3}
+  - {fileID: 73926499041588121, guid: 64decec96be94ab49b41cd3d417d5b11, type: 3}
   gunSprite: {fileID: 1169284253}
   gunPriceText: {fileID: 964562201}
 --- !u!1 &1908306320
