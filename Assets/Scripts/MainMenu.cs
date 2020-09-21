@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string levelToLoad;
+    public GameObject deletePanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,20 @@ public class MainMenu : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+    public void DeleteSave()
+    {
+        deletePanel.SetActive(true);
+    }
+    public void ConfirmDelete()
+    {
+        deletePanel.SetActive(false);
+        PlayerPrefs.DeleteKey("ninja");
+        PlayerPrefs.DeleteKey("devil");
+
+    }
+    public void CancelDelete()
+    {
+        deletePanel.SetActive(false);
     }
 }

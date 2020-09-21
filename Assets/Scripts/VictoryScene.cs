@@ -11,7 +11,7 @@ public class VictoryScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(PlayerController.instance.gameObject);
     }
 
     // Update is called once per frame

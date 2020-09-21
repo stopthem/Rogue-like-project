@@ -22,15 +22,14 @@ public class ShopItem : MonoBehaviour
             int selectedGun = Random.Range(0, potentialGuns.Length);
             theGun = potentialGuns[selectedGun];
             gunSprite.sprite = theGun.gunShopSprite;
-            
+            itemCost = theGun.itemCost;
+            gunPriceText.text = theGun.weaponName +"\n"+itemCost+" GOLD";
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        itemCost = theGun.itemCost;
-        gunPriceText.text = theGun.weaponName +"\n"+itemCost+" GOLD";
         if (inBuyZone)
         {
             if (Input.GetKeyDown(KeyCode.E))

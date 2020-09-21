@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     public string levelToLoad;
+    public bool isLevel1,isLevel2;
+    public bool isLevel1Completed, isLevel2Completed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,17 @@ public class LevelExit : MonoBehaviour
         if (other.tag == "Player")
         {
             StartCoroutine(LevelManager.instance.LevelEnd());
+            if (isLevel1)
+            {
+                isLevel1Completed = true;
+                PlayerPrefs.SetInt("ninja",1);
+            }
+            if (isLevel2)
+            {
+                isLevel2Completed = true;
+                PlayerPrefs.SetInt("devil",1);
+            }
+            
         }
     }
 }
