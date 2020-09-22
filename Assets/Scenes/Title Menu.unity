@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &621192950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,10 +914,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NormalColor: {r: 0.16981131, g: 0.14017443, b: 0.14017443, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.1792453, g: 0.15979888, b: 0.15979888, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1850,26 +1850,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controls Text
       objectReference: {fileID: 0}
-    - target: {fileID: 2219307268824003627, guid: 43ca98e144636004d933a16c5afeb45a,
-        type: 3}
-      propertyPath: m_Text
-      value: 'CONTROLS
-
-
-        ROLL - E
-
-        OPEN CHEST - E
-
-        SHOOT
-        - LEFT CLICK
-
-        BUY ITEM - E
-
-        SWITCH BETWEEN MAPS - TAB
-
-        SWITCH
-        BETWEEN WEAPONS - Q'
-      objectReference: {fileID: 0}
     - target: {fileID: 8502277395685409435, guid: 43ca98e144636004d933a16c5afeb45a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1933,7 +1913,7 @@ PrefabInstance:
     - target: {fileID: 8502277395685409435, guid: 43ca98e144636004d933a16c5afeb45a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -178.6
+      value: -224.4
       objectReference: {fileID: 0}
     - target: {fileID: 8502277395685409435, guid: 43ca98e144636004d933a16c5afeb45a,
         type: 3}
@@ -1943,7 +1923,7 @@ PrefabInstance:
     - target: {fileID: 8502277395685409435, guid: 43ca98e144636004d933a16c5afeb45a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 357.21878
+      value: 448.72946
       objectReference: {fileID: 0}
     - target: {fileID: 8502277395685409435, guid: 43ca98e144636004d933a16c5afeb45a,
         type: 3}

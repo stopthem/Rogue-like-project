@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI coinText;
     public Image currentGun;
     public Text gunText;
+    public Slider bossHealthSlider;
     // Start is called before the first frame update
     private void Awake() {
         instance=this;

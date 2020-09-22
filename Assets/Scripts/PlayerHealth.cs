@@ -47,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
+                UIController.instance.bossHealthSlider.gameObject.SetActive(false);
                 AudioManager.instance.PlaySFX(9);
                 AudioManager.instance.PlayGameOver();
             }

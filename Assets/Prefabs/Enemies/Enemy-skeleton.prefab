@@ -101,7 +101,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 1838006805497630750}
   fireRate: 2
-  rangeToAggro: 10
+  rangeToAggro: 15
   shouldDropItem: 1
   itemsToDrop:
   - {fileID: 1034085831315134040, guid: 68c74f52c1f982244a671c23a4e79a83, type: 3}

@@ -81,13 +81,20 @@ MonoBehaviour:
   m_Text: 'CONTROLS
 
 
-    ROLL - E
+    MOVE - WASD,DIRECTION KEYS
+
+    AIM - MOUSE MOVEMENT
+
+    ROLL
+    - E
 
     OPEN CHEST - E
 
     SHOOT - LEFT CLICK
 
-    BUY
-    ITEM - E
+    BUY ITEM - E
 
-    SWITCH BETWEEN MAPS - TAB'
+    SWITCH
+    BETWEEN MAPS - TAB
+
+    SWITCH BETWEEN WEAPONS - Q'

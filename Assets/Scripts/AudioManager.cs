@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public AudioSource gameOverMusic, levelMusic, winMusic;
+    public AudioSource gameOverMusic, levelMusic, winMusic,bossMusic;
     public AudioSource[] sfx;
     // Start is called before the first frame update
     private void Awake()
@@ -31,6 +31,12 @@ public class AudioManager : MonoBehaviour
     {
         levelMusic.Stop();
         winMusic.Play();
+    }
+    public void PlayBossMusic()
+    {
+        levelMusic.Stop();
+        bossMusic.Play();
+        bossMusic.volume = 0.1f;
     }
     public void PlaySFX(int sfxToPlay)
     {

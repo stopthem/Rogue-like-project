@@ -102,7 +102,7 @@ MonoBehaviour:
   rigidBody: {fileID: 8333332427728006648}
   bulletImpactVFX: {fileID: 2172752772493428207, guid: 6111f516ab320c94f8a2e0666eb7dbc9,
     type: 3}
-  damageToGive: 75
+  damageToGive: 90
 --- !u!61 &8333332427728006651
 BoxCollider2D:
   m_ObjectHideFlags: 0

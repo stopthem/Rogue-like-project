@@ -40,6 +40,8 @@ public class ShopItem : MonoBehaviour
                     if (isHealthRestore)
                     {
                         PlayerHealth.instance.currentHealth = PlayerHealth.instance.maxHealth;
+                        UIController.instance.healthSlider.value = PlayerHealth.instance.currentHealth;
+                        UIController.instance.healthText.text = PlayerHealth.instance.currentHealth.ToString()+"/"+PlayerHealth.instance.maxHealth.ToString();
                     }
                     if (isHealthUpgrade)
                     {
