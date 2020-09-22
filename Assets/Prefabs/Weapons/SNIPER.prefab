@@ -100,7 +100,7 @@ MonoBehaviour:
   bulletToFire: {fileID: 8333332427728006649, guid: 77f669fec2dc59d4093115031cb83993,
     type: 3}
   firePoint: {fileID: 8687083289091326498}
-  timeBetweenShots: 1.5
+  timeBetweenShots: 1
   weaponName: SNIPER
   weaponUI: {fileID: -2172343002418747524, guid: f72804754a2106a4884d758772ef2a02,
     type: 3}
