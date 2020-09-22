@@ -852,6 +852,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7812667531815942620, guid: d363c351aebefab418ba0354540ead3e,
+        type: 3}
+      propertyPath: m_Text
+      value: 'CONTROLS
+
+
+        MOVE - WASD,DIRECTION KEYS
+
+        AIM - MOUSE
+        MOVEMENT
+
+        ROLL - SPACE
+
+        OPEN CHEST - E
+
+        SHOOT - LEFT
+        CLICK
+
+        BUY ITEM - E
+
+        SWITCH BETWEEN MAPS - TAB
+
+        SWITCH
+        BETWEEN WEAPONS - Q'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d363c351aebefab418ba0354540ead3e, type: 3}
 --- !u!1001 &8339170009467520759
