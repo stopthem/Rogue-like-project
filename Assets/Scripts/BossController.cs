@@ -145,7 +145,5 @@ public class BossSequence
 {
     [Header("Sequence")]
     public BossAction[] actions;
-
-
     public int endSequenceHealth;
 }
