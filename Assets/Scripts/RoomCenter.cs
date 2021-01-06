@@ -7,7 +7,6 @@ public class RoomCenter : MonoBehaviour
     public List<GameObject> enemies = new List<GameObject>();
     public bool openWhenEnemiesCleared;
     public Room theRoom;
-    // Start is called before the first frame update
     void Start()
     {
         if (openWhenEnemiesCleared)
@@ -16,7 +15,6 @@ public class RoomCenter : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (enemies.Count > 0 && theRoom.roomActive && openWhenEnemiesCleared)

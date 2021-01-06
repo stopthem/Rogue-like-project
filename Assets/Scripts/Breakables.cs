@@ -9,17 +9,7 @@ public class Breakables : MonoBehaviour
     public bool shouldDropItem;
     public GameObject[] itemsToDrop;
     public float itemDropPercent;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void Smash()
     {
         Destroy(gameObject);
@@ -27,19 +17,19 @@ public class Breakables : MonoBehaviour
 
         int piecesToDrop = Random.Range(1, maxPieces);
         for (int i = 0; i < piecesToDrop; i++)
-            {
-                    int randomPiece = Random.Range(0,brokenPieces.Length);
-                    Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
-            }
+        {
+            int randomPiece = Random.Range(0, brokenPieces.Length);
+            Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
+        }
         if (shouldDropItem)
+        {
+            float dropChance = Random.Range(0f, 100f);
+            if (dropChance < itemDropPercent)
             {
-                float dropChance = Random.Range(0f,100f);
-                if (dropChance < itemDropPercent)
-                {
-                    int randomItem = Random.Range(0,itemsToDrop.Length);
-                    Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
-                }
+                int randomItem = Random.Range(0, itemsToDrop.Length);
+                Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
             }
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

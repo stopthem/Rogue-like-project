@@ -6,13 +6,7 @@ public class CoinPickup : MonoBehaviour
 {
     public int coinValue = 1;
     public float waitToBeCollected;
-    
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (waitToBeCollected > 0)

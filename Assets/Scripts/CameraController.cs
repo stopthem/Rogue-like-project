@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     public bool isBossRoom;
 
     private bool bigMapActive;
-    // Start is called before the first frame update
+
     private void Awake()
     {
         instance = this;
@@ -24,12 +24,11 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, target.position.y,transform.position.z), moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), moveSpeed * Time.deltaTime);
         }
         if (Input.GetKeyDown(KeyCode.Tab) && !isBossRoom)
         {
@@ -42,9 +41,9 @@ public class CameraController : MonoBehaviour
                 DeActivateBigMap();
             }
         }
-        
+
     }
-    public void ChangeTraget(Transform newTarget)
+    public void ChangeTarget(Transform newTarget)
     {
         target = newTarget;
     }
@@ -60,11 +59,11 @@ public class CameraController : MonoBehaviour
             UIController.instance.mapDisplay.SetActive(false);
             UIController.instance.bigMapText.SetActive(true);
         }
-        
+
     }
     public void DeActivateBigMap()
     {
-        if(!LevelManager.instance.isPaused)
+        if (!LevelManager.instance.isPaused)
         {
             bigMapActive = false;
             bigMapCamera.enabled = false;

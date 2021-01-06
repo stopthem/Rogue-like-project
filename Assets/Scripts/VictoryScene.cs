@@ -8,13 +8,13 @@ public class VictoryScene : MonoBehaviour
     public float waitForAnyKey = 2f;
     public GameObject anyKeyText;
     public string mainMenuScene;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Destroy(PlayerController.instance.gameObject);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (waitForAnyKey > 0)

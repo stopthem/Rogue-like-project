@@ -6,20 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     public string levelToLoad;
-    public bool isLevel1,isLevel2;
+    public bool isLevel1, isLevel2;
     public bool isLevel1Completed, isLevel2Completed = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -28,14 +17,14 @@ public class LevelExit : MonoBehaviour
             if (isLevel1)
             {
                 isLevel1Completed = true;
-                PlayerPrefs.SetInt("ninja",1);
+                PlayerPrefs.SetInt("ninja", 1);
             }
             if (isLevel2)
             {
                 isLevel2Completed = true;
-                PlayerPrefs.SetInt("devil",1);
+                PlayerPrefs.SetInt("devil", 1);
             }
-            
+
         }
     }
 }

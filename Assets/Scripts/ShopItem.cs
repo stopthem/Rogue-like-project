@@ -14,7 +14,7 @@ public class ShopItem : MonoBehaviour
     private Gun theGun;
     public SpriteRenderer gunSprite;
     public Text gunPriceText;
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (isWeapon)
@@ -23,11 +23,11 @@ public class ShopItem : MonoBehaviour
             theGun = potentialGuns[selectedGun];
             gunSprite.sprite = theGun.gunShopSprite;
             itemCost = theGun.itemCost;
-            gunPriceText.text = theGun.weaponName +"\n"+itemCost+" GOLD";
+            gunPriceText.text = theGun.weaponName + "\n" + itemCost + " GOLD";
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (inBuyZone)
@@ -41,7 +41,7 @@ public class ShopItem : MonoBehaviour
                     {
                         PlayerHealth.instance.currentHealth = PlayerHealth.instance.maxHealth;
                         UIController.instance.healthSlider.value = PlayerHealth.instance.currentHealth;
-                        UIController.instance.healthText.text = PlayerHealth.instance.currentHealth.ToString()+"/"+PlayerHealth.instance.maxHealth.ToString();
+                        UIController.instance.healthText.text = PlayerHealth.instance.currentHealth.ToString() + "/" + PlayerHealth.instance.maxHealth.ToString();
                     }
                     if (isHealthUpgrade)
                     {

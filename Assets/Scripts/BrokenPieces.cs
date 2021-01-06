@@ -11,18 +11,16 @@ public class BrokenPieces : MonoBehaviour
     public SpriteRenderer theSR;
     public float fadeTime = 2.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         moveDirection.x = Random.Range(-moveSpeed, moveSpeed);
         moveDirection.y = Random.Range(-moveSpeed, moveSpeed);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position += moveDirection * Time.deltaTime;
-        moveDirection = Vector3.Lerp(moveDirection,Vector3.zero,decerelation * Time.deltaTime);
+        moveDirection = Vector3.Lerp(moveDirection, Vector3.zero, decerelation * Time.deltaTime);
         lifeTime -= Time.deltaTime;
         if (lifeTime < 0)
         {
@@ -31,7 +29,7 @@ public class BrokenPieces : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            
+
         }
     }
 }

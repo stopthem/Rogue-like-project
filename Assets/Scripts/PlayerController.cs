@@ -17,20 +17,20 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public SpriteRenderer bodySprite;
     private float activeMoveSpeed;
-    public float dashSpeed = 8f , dashLength= .5f , dashCooldown= 1f , dashInvincibleAbility = .5f;
+    public float dashSpeed = 8f, dashLength = .5f, dashCooldown = 1f, dashInvincibleAbility = .5f;
     private float dashCdCounter;
-    [HideInInspector]public bool canMove = true;
-    [HideInInspector]public float dashCounter;
+    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public float dashCounter;
     public List<Gun> availableGuns = new List<Gun>();
-    [HideInInspector]public int currentGun;
-    private void Awake() {
-        instance=this;
+    [HideInInspector] public int currentGun;
+    private void Awake()
+    {
+        instance = this;
         DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
-        // mainCamera=Camera.main;
-        activeMoveSpeed=movementSpeed;
+        activeMoveSpeed = movementSpeed;
         UIController.instance.currentGun.sprite = availableGuns[currentGun].weaponUI;
         UIController.instance.gunText.text = availableGuns[currentGun].weaponName;
     }
@@ -40,12 +40,11 @@ public class PlayerController : MonoBehaviour
         {
             MovePlayer();
             GunAndBodyFacing();
-            // Shoot();
         }
         else
         {
             rigidBody.velocity = Vector2.zero;
-            anim.SetBool("isMoving",false);
+            anim.SetBool("isMoving", false);
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -57,35 +56,14 @@ public class PlayerController : MonoBehaviour
                     currentGun = 0;
                 }
                 SwitchGun();
-            }   
+            }
             else
             {
                 Debug.LogError("Player has no guns!");
             }
         }
-        
+
     }
-
-    // private void Shoot()
-    // {
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
-    //         AudioManager.instance.PlaySFX(12);
-    //         shotCounter=timeBetweenShots;
-    //     }
-    //     if (Input.GetMouseButton(0))
-    //     {
-    //         shotCounter -= Time.deltaTime;
-    //         if (shotCounter<=0)
-    //         {
-    //             Instantiate(bulletToFire,firePoint.position,firePoint.rotation);
-    //             AudioManager.instance.PlaySFX(12);
-    //             shotCounter=timeBetweenShots;
-    //         }
-    //     }
-    // }
-
 
     private void GunAndBodyFacing()
     {
@@ -133,7 +111,7 @@ public class PlayerController : MonoBehaviour
                 AudioManager.instance.PlaySFX(8);
                 PlayerHealth.instance.MakePlayerInvincible(dashInvincibleAbility);
             }
-            
+
         }
         if (dashCounter > 0)
         {

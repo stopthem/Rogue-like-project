@@ -14,23 +14,24 @@ public class UIController : MonoBehaviour
     public float fadeTime;
     private bool fadeToBlack, fadeOutBlack;
     public string newGameScene, mainMenuScene;
-    public GameObject pauseScreen,mapDisplay,bigMapText;
+    public GameObject pauseScreen, mapDisplay, bigMapText;
     public TextMeshProUGUI coinText;
     public Image currentGun;
     public Text gunText;
     public Slider bossHealthSlider;
-    // Start is called before the first frame update
-    private void Awake() {
-        instance=this;
+    
+    private void Awake()
+    {
+        instance = this;
     }
     void Start()
     {
-        
+
         fadeOutBlack = true;
         fadeToBlack = false;
         currentGun.sprite = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].gunShopSprite;
         gunText.text = PlayerController.instance.availableGuns[PlayerController.instance.currentGun].weaponName;
-        
+
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class UIController : MonoBehaviour
         if (fadeOutBlack == true)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeTime * Time.deltaTime));
-            if(fadeScreen.color.a == 0f)
+            if (fadeScreen.color.a == 0f)
             {
                 fadeOutBlack = false;
             }
@@ -47,7 +48,7 @@ public class UIController : MonoBehaviour
         if (fadeToBlack)
         {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeTime * Time.deltaTime));
-            if(fadeScreen.color.a == 1f)
+            if (fadeScreen.color.a == 1f)
             {
                 fadeToBlack = false;
             }

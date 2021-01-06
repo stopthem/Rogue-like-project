@@ -12,20 +12,14 @@ public class Gun : MonoBehaviour
     public Sprite weaponUI;
     public int itemCost;
     public Sprite gunShopSprite;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (PlayerController.instance.canMove && !LevelManager.instance.isPaused)
         {
             Shoot();
         }
-        
+
     }
 
     private void Shoot()
@@ -42,16 +36,6 @@ public class Gun : MonoBehaviour
                 AudioManager.instance.PlaySFX(12);
                 shotCounter = timeBetweenShots;
             }
-            // if (Input.GetMouseButton(0))
-            // {
-            //     shotCounter -= Time.deltaTime;
-            //     if (shotCounter <= 0)
-            //     {
-            //         Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-            //         AudioManager.instance.PlaySFX(12);
-            //         shotCounter = timeBetweenShots;
-            //     }
-            // }
         }
     }
 }

@@ -7,13 +7,7 @@ public class CharachterSelect : MonoBehaviour
     public GameObject message;
     private bool canSelect;
     public PlayerController playerToSpawn;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (canSelect)
@@ -22,7 +16,7 @@ public class CharachterSelect : MonoBehaviour
             {
                 Vector3 playerPosition = PlayerController.instance.transform.position;
                 Destroy(PlayerController.instance.gameObject);
-                PlayerController newPlayer = Instantiate(playerToSpawn,playerPosition,playerToSpawn.transform.rotation);
+                PlayerController newPlayer = Instantiate(playerToSpawn, playerPosition, playerToSpawn.transform.rotation);
                 PlayerController.instance = newPlayer;
                 gameObject.SetActive(false);
                 CameraController.instance.target = newPlayer.transform;
@@ -39,7 +33,7 @@ public class CharachterSelect : MonoBehaviour
             canSelect = true;
             message.SetActive(true);
         }
-        
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {

@@ -7,22 +7,21 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth instance;
     public int currentHealth;
     public int maxHealth;
-    public float damageInvincibleLenght=1f;
+    public float damageInvincibleLenght = 1f;
     private float invincibleCount;
-    private void Awake() {
-        instance=this;
+    private void Awake()
+    {
+        instance = this;
     }
     void Start()
     {
         maxHealth = CharachterTracker.instance.maxHealth;
         currentHealth = CharachterTracker.instance.currentHealth;
-        // currentHealth=maxHealth;
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();
+        UIController.instance.healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (invincibleCount > 0)
@@ -30,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
             invincibleCount -= Time.deltaTime;
             if (invincibleCount <= 0)
             {
-                PlayerController.instance.bodySprite.color=new Color(PlayerController.instance.bodySprite.color.r,PlayerController.instance.bodySprite.color.g,PlayerController.instance.bodySprite.color.b,1f);
+                PlayerController.instance.bodySprite.color = new Color(PlayerController.instance.bodySprite.color.r, PlayerController.instance.bodySprite.color.g, PlayerController.instance.bodySprite.color.b, 1f);
             }
         }
     }
@@ -38,12 +37,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if (invincibleCount <= 0)
         {
-            
+
             currentHealth--;
             AudioManager.instance.PlaySFX(11);
-            invincibleCount=damageInvincibleLenght;
-            PlayerController.instance.bodySprite.color=new Color(PlayerController.instance.bodySprite.color.r,PlayerController.instance.bodySprite.color.g,PlayerController.instance.bodySprite.color.b,.5f);
-            if (currentHealth<=0)
+            invincibleCount = damageInvincibleLenght;
+            PlayerController.instance.bodySprite.color = new Color(PlayerController.instance.bodySprite.color.r, PlayerController.instance.bodySprite.color.g, PlayerController.instance.bodySprite.color.b, .5f);
+            if (currentHealth <= 0)
             {
                 PlayerController.instance.gameObject.SetActive(false);
                 UIController.instance.deathScreen.SetActive(true);
@@ -52,13 +51,13 @@ public class PlayerHealth : MonoBehaviour
                 AudioManager.instance.PlayGameOver();
             }
             UIController.instance.healthSlider.value = currentHealth;
-            UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();
+            UIController.instance.healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
         }
     }
     public void MakePlayerInvincible(float length)
     {
         invincibleCount = length;
-        PlayerController.instance.bodySprite.color=new Color(PlayerController.instance.bodySprite.color.r,PlayerController.instance.bodySprite.color.g,PlayerController.instance.bodySprite.color.b,.5f);
+        PlayerController.instance.bodySprite.color = new Color(PlayerController.instance.bodySprite.color.r, PlayerController.instance.bodySprite.color.g, PlayerController.instance.bodySprite.color.b, .5f);
     }
     public void HealPlayer(int healAmount)
     {
@@ -68,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();
+        UIController.instance.healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
     }
     public void IncreaseMaxHealth(int amount)
     {
@@ -76,6 +75,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthText.text=currentHealth.ToString()+"/"+maxHealth.ToString();
+        UIController.instance.healthText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
     }
 }

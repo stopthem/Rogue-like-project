@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     public bool isPaused;
     public int currentCoins;
     public Transform spawnPoint;
-    // Start is called before the first frame update
+    
     private void Awake()
     {
         instance = this;
@@ -23,12 +23,12 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.canMove = true;
         currentCoins = CharachterTracker.instance.currentCoin;
         Time.timeScale = 1f;
-        UIController.instance.coinText.text=currentCoins.ToString();
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
 
-    // Update is called once per frame
+    
     void Update()
-    { 
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseUnPause();
@@ -64,16 +64,16 @@ public class LevelManager : MonoBehaviour
     public void GetCoins(int coinAmount)
     {
         currentCoins += coinAmount;
-        UIController.instance.coinText.text=currentCoins.ToString();
+        UIController.instance.coinText.text = currentCoins.ToString();
     }
     public void SpendCoins(int coinAmount)
     {
         currentCoins -= coinAmount;
-        UIController.instance.coinText.text=currentCoins.ToString();
-       if (currentCoins < 0)
-       {
-           currentCoins = 0;
-           UIController.instance.coinText.text=currentCoins.ToString();
-       } 
+        UIController.instance.coinText.text = currentCoins.ToString();
+        if (currentCoins < 0)
+        {
+            currentCoins = 0;
+            UIController.instance.coinText.text = currentCoins.ToString();
+        }
     }
 }

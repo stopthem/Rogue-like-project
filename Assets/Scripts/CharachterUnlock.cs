@@ -12,7 +12,6 @@ public class CharachterUnlock : MonoBehaviour
     public GameObject message;
     public GameObject charachterToUnlock;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         instance = this;
@@ -29,7 +28,6 @@ public class CharachterUnlock : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (canUnlock)
@@ -63,7 +61,7 @@ public class CharachterUnlock : MonoBehaviour
         {
             canUnlock = true;
             message.SetActive(true);
-            
+
         }
     }
     private void OnTriggerExit2D(Collider2D other)

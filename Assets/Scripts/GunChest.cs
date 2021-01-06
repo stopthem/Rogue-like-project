@@ -11,21 +11,15 @@ public class GunChest : MonoBehaviour
     public Transform spawnPoint;
     private bool canOpen, isOpened;
     public float scaleSpeed = 2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (canOpen && !isOpened)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                int gunSelect= Random.Range(0,potentialGuns.Length);
-                Instantiate(potentialGuns[gunSelect],spawnPoint.position, spawnPoint.rotation);
+                int gunSelect = Random.Range(0, potentialGuns.Length);
+                Instantiate(potentialGuns[gunSelect], spawnPoint.position, spawnPoint.rotation);
                 theSR.sprite = chestOpen;
                 isOpened = true;
                 transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);

@@ -7,13 +7,6 @@ public class GunPickup : MonoBehaviour
     public float waitToBeCollected = .5f;
     public Gun theGun;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (waitToBeCollected > 0)
@@ -46,7 +39,7 @@ public class GunPickup : MonoBehaviour
                 AudioManager.instance.PlaySFX(7);
                 Destroy(gameObject);
             }
-            
+
         }
     }
 }

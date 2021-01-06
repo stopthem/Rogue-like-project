@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour
 
     public BossSequence[] sequences;
     public int currentSequence;
-    // Start is called before the first frame update
+
     private void Awake()
     {
         instance = this;
@@ -36,7 +36,6 @@ public class BossController : MonoBehaviour
         AudioManager.instance.PlayBossMusic();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (actionCounter > 0)
@@ -83,7 +82,7 @@ public class BossController : MonoBehaviour
                 moveDirection = PlayerController.instance.transform.position - transform.position;
                 moveDirection.Normalize();
             }
-            if (actions[currentAction].moveToPoints && Vector3.Distance(transform.position,actions[currentAction].pointToMove.position)> .5f)
+            if (actions[currentAction].moveToPoints && Vector3.Distance(transform.position, actions[currentAction].pointToMove.position) > .5f)
             {
                 moveDirection = actions[currentAction].pointToMove.position - transform.position;
                 moveDirection.Normalize();
@@ -100,11 +99,11 @@ public class BossController : MonoBehaviour
             AudioManager.instance.PlaySFX(10);
             gameObject.SetActive(false);
             AudioManager.instance.bossMusic.Stop();
-            Instantiate(deathFX,transform.position, transform.rotation);
+            Instantiate(deathFX, transform.position, transform.rotation);
             levelExit.SetActive(true);
-            if (Vector3.Distance(PlayerController.instance.transform.position, levelExit.transform.position)< 2f)
+            if (Vector3.Distance(PlayerController.instance.transform.position, levelExit.transform.position) < 2f)
             {
-                levelExit.transform.position += new Vector3(4f,0f,0f);
+                levelExit.transform.position += new Vector3(4f, 0f, 0f);
             }
             UIController.instance.bossHealthSlider.gameObject.SetActive(false);
         }
@@ -119,7 +118,7 @@ public class BossController : MonoBehaviour
             }
         }
         UIController.instance.bossHealthSlider.value = currentHealth;
-        
+
     }
 }
 [System.Serializable]
